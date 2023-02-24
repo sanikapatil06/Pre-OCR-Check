@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <title>Scan</title>
+
+    <style>
+        @font-face {
+    font-family: 'Montserrat';
+    src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body{
+    height: 100vh;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-size: 1%;
+    background-size: cover;
+    background-color: #FFFFFF;
+    background-position: center;
+  
+}
+
+h1{
+    text-align: center;
+    color: #3a953a; 
+    background-color: #EAFDFC; 
+    padding: 10px; 
+    border-radius: 35px; 
+    border-color: #52126d; 
+    border-width: 20px; 
+    width: 70%;
+    margin: auto;
+}
+
+.card{
+    position: relative;
+    margin: auto;
+    top: -5px;
+    left: 150px;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    float: left;
+    width: 50%;
+    padding: 20px;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    background-color: white;
+    border-radius: 0.25rem;
+}
+
+.mainContainer{
+    padding: 16px;
+    width:40rem;
+    margin: auto;
+    backdrop-filter: blur(16px) saturate(180%);
+    background-color: #EAFDFC;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+
+.image-preview-container {
+    width: 60%;
+    margin: 0 auto;
+    border: 5px  solid  rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    border-radius: 20px;
+}
+
+.image-preview-container img {
+    max-width: 300px;
+    margin-right:2 px;
+    display: none;
+    margin-bottom: 30px;
+}
+.image-preview-container input {
+    display: none;
+}
+
+.image-preview-container label {
+    display: block;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    background: #009b28;
+    color: #fff;
+    font-size: 15px;
+    text-transform: Uppercase;
+    font-weight: 400;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    display: block;
+    padding: 10px;
+    border: 2px solid #009b28; /* black */
+    background-color: #009b28;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    width: 30%;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5%;
+  }
+button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+.box{
+  position: absolute;
+  width: 600px;
+   height: 80px; 
+   border: 3px solid rgb(255, 255, 255);
+   top: 550px ;
+   left: 400px;
+   border-radius: 8px;
+}
+/* Defination_Cards */
+
+* { 
+  margin : 0;
+  padding: 0;
+  box-sizing : border-box;
+}
+body {
+  display : flex;
+  align-items : center;
+  justify-content : center;  
+  background-color: #6ab734;
+  min-height : 100px;
+}
+
+.good_img{
+    max-width: 180px;
+}
+
+
+.card_container {
+  position : relative;
+  top: -5px;
+  width : 400px;
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  padding : 1px;  
+}
+
+.card_container .card_good {
+  position: relative;
+  max-width : 600px;
+  height : 80px;  
+  top: 500px;
+  left: -800px;
+  background-color : #fff;
+  margin : 30px 10px;
+  padding : 20px;
+  text-align: center;
+  
+  
+  display : flex;
+  flex-direction : column;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+  transition : 0.3s ease-in-out;
+  border-radius : 15px;
+  opacity: 80%;
+}
+.card_container .card_good:hover {
+  height : 400px;    
+}
+
+.card_container .card_good .image {
+  position : relative;
+  width : 100px;
+  height : 100px; 
+  top : -20%;
+  left: 60px;
+}
+
+.h3{
+
+   top : 40%;
+  left: 40px;
+}
+.card_container .card_good .image img {
+  max-width : 10%;
+  border-radius : 15px;
+}
+
+.card_container .card_good .content {
+  position : relative;
+  max-width: 210px;
+  padding : 5px 15px;
+  color : #111;
+  text-align : center;
+  margin: auto;
+  visibility : hidden;
+  opacity : 0;
+  transition : 0.3s ease-in-out;
+    
+}
+
+.card_container .card_good:hover .content {
+   margin-top : 2px;
+   visibility : visible;
+   opacity : 1;
+   transition-delay: 0.2s;
+  
+}
+
+
+/* Moderate Image */
+
+* { 
+  margin : 0;
+  padding: 0;
+  box-sizing : border-box;
+}
+body {
+  display : flex;
+  align-items : center;
+  justify-content : center;  
+  background-color: #43345d;
+  min-height : 100px;
+}
+
+.mod_img{
+    max-width: 180px;
+}
+
+
+.card_container {
+  position : relative;
+  top: -5px;
+  width : 400px;
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  padding : 1px;  
+}
+
+.card_container .card_mod {
+  position: relative;
+  max-width : 600px;
+  height : 80px;  
+  top: 500px;
+  left: -600px;
+  background-color : #fff;
+  margin : 30px 10px;
+  padding : 10px 15px;
+  text-align: center;
+  display : flex;
+  flex-direction : column;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+  transition : 0.3s ease-in-out;
+  border-radius : 15px;
+  opacity: 80%;
+}
+.card_container .card_mod:hover {
+  height : 400px;    
+}
+
+.card_container .card_mod .image {
+  position : relative;
+  width : 100px;
+  height : 100px; 
+  top : -20%;
+  left: 60px;
+}
+
+.h3{
+
+   top : 40%;
+  left: 40px;
+}
+.card_container .card_mod .image img {
+  max-width : 10%;
+  border-radius : 15px;
+}
+
+.card_container .card_mod .content {
+  position : relative;
+  max-width: 210px;
+  padding : 5px 15px;
+  color : #111;
+  text-align : center;
+  margin: auto;
+  visibility : hidden;
+  opacity : 0;
+  transition : 0.3s ease-in-out;
+    
+}
+
+.card_container .card_mod:hover .content {
+   margin-top : 2px;
+   visibility : visible;
+   opacity : 1;
+   transition-delay: 0.2s;
+  
+}
+
+/* Bad Images */
+
+* { 
+  margin : 0;
+  padding: 0;
+  box-sizing : border-box;
+}
+body {
+  display : flex;
+  align-items : center;
+  justify-content : center;  
+  background-color: #43345d;
+  min-height : 100px;
+}
+
+.bad_img{
+    max-width: 180px;
+}
+
+
+.card_container {
+  position : relative;
+  top: -5px;
+  width : 400px;
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  padding : 1px;  
+}
+
+.card_container .card_bad {
+  position: relative;
+  max-width : 600px;
+  height : 80px;  
+  top: 500px;
+  left: -400px;
+  background-color : #fff;
+  margin : 30px 10px;
+  padding : 10px 15px;
+  text-align: center;
+  display : flex;
+  flex-direction : column;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+  transition : 0.3s ease-in-out;
+  border-radius : 15px;
+  opacity: 80%;
+}
+.card_container .card_bad:hover {
+  height : 400px;    
+}
+
+.card_container .card_bad .image {
+  position : relative;
+  width : 100px;
+  height : 100px; 
+  top : -20%;
+  left: 60px;
+}
+
+.h3{
+
+   top : 40%;
+  left: 40px;
+}
+.card_container .card_bad .image img {
+  max-width : 10%;
+  border-radius : 15px;
+}
+
+.card_container .card_bad .content {
+  position : relative;
+  max-width: 210px;
+  padding : 5px 15px;
+  color : #111;
+  text-align : center;
+  margin: auto;
+  visibility : hidden;
+  opacity : 0;
+  transition : 0.3s ease-in-out;
+    
+}
+
+.card_container .card_bad:hover .content {
+   margin-top : 2px;
+   visibility : visible;
+   opacity : 1;
+   transition-delay: 0.2s;
+  
+}
+
+/* .pred{
+  height: 50px;
+  width: 150px;
+  border-color: #009b28;
+  border-radius: 5px;
+} */
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="upload">
+      <h1 class="h1">Upload image here!</h1>
+    </div>
+    <div class="mainContaner"></div>
+
+    <div class="image-preview-container">
+        <div class="preview">
+            <img id="preview-selected-image" />
+        </div>
+        <label for="file-upload"><b>Upload Image</b></label>
+        <input type="file" id="file-upload" accept="image/*" onchange="previewImage(event);" />
+      </div>
+
+<div class="btn">
+    <button id="button">Submit</button>
+</div>
+
+
+</div>
+<div class="box">
+
+
+</div>
+
+<!-- Defination Cards -->
+<div class = "card_container">
+    <div class = card_good>
+      <div class = image>
+      </div>
+      <h3><b>Good Image</b></h3>
+      <div class = content>
+        <img class="good_img" src="goodimg.jpg">
+        <p class="good_para">Readable & Clear Images</p>
+      </div>
+    </div>    
+ 
+    <div class = card_mod>
+      <div class = image>
+      </div>
+      <h3><b>Moderate Image</b></h3>
+      <div class = content>
+        <img class="mod_img" src="moderate.jpg">
+        <p>Partially Unclear Images</p>
+      </div>
+    </div>    
+
+    <div class = card_bad>
+      <div class = image>
+      </div>
+      <h3><b>Poor Image</b></h3>
+      <div class = content>
+        <img class="bad_img" src="bad.jpg">
+        <p>Tampered, Blurred & Unreadable Images</p>
+      </div>
+    </div>    
+</div>
+
+
+
+</body>
+<script>
+
+const previewImage = (event) => {
+
+const imageFiles = event.target.files;
+
+const imageFilesLength = imageFiles.length;
+
+if (imageFilesLength > 0) {
+ 
+    const imageSrc = URL.createObjectURL(imageFiles[0]);
+   
+    const imagePreviewElement = document.querySelector("#preview-selected-image");
+  
+    imagePreviewElement.src = imageSrc;
+
+    imagePreviewElement.style.display = "block";
+}
+
+
+const fileInput = document.getElementById('file-upload');
+const previewImage = document.getElementById('preview-selected-image');
+
+fileInput.addEventListener('change', function(event) {
+const file = event.target.files[0];
+const reader = new FileReader();
+
+reader.onload = function(event) {
+    previewImage.src = event.target.result;
+};
+
+reader.readAsDataURL(file);
+});
+
+document.getElementById('button').addEventListener('click', function(event) {
+const formData = new FormData();
+formData.append('file-upload', fileInput.files[0]);
+
+const xhr = new XMLHttpRequest();
+xhr.open('POST', '/');
+xhr.send(formData);
+
+xhr.onload = function() {
+    if (xhr.status === 200) {
+        console.log('Image uploaded successfully!');
+    } else {
+        console.error('Failed to upload image');
+    }
+};
+});
+
+
+  
+
+
+};
+</script>
+</body>
+</html>
